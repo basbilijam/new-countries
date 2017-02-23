@@ -1,0 +1,14 @@
+extends ./application.pug
+
+block content
+  .container
+    h1 All Countries
+    hr
+    each country in countries
+      .card.card-block
+        h4(class="card-title")= country.name
+        p(class="card-text")= "Capital: " + country.capital
+        p(class="card-text")= country.nativeName
+        p(class="card-text")= "Languages: " + country.languages
+        p(class="card-text")= "Population: " + country.population
+	
